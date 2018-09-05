@@ -1,0 +1,100 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* crm_timeline_action
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20180303\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-05 09:28+0000\n"
+"PO-Revision-Date: 2018-09-05 09:28+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_timeline_action
+#: model:ir.ui.view,arch_db:crm_timeline_action.crm_action_partner_view
+msgid "CRM - Timeline"
+msgstr "CRM - Timeline"
+
+#. module: crm_timeline_action
+#: code:addons/crm_timeline_action/models/res_partner.py:14
+#: model:ir.model.fields,field_description:crm_timeline_action.field_res_partner_crm_timeline_actions
+#: model:ir.model.fields,field_description:crm_timeline_action.field_res_users_crm_timeline_actions
+#: model:ir.ui.view,arch_db:crm_timeline_action.crm_action_partner_view
+#, python-format
+msgid "CRM Actions"
+msgstr "Acciones CRM"
+
+#. module: crm_timeline_action
+#: model:ir.model.fields,field_description:crm_timeline_action.field_crm_timeline_action_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: crm_timeline_action
+#: model:ir.model.fields,field_description:crm_timeline_action.field_crm_timeline_action_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: crm_timeline_action
+#: code:addons/crm_timeline_action/models/crm_timeline_action.py:14
+#: model:ir.model.fields,field_description:crm_timeline_action.field_crm_timeline_action_date
+#, python-format
+msgid "Date"
+msgstr "Fecha"
+
+#. module: crm_timeline_action
+#: code:addons/crm_timeline_action/models/crm_timeline_action.py:29
+#: model:ir.model.fields,field_description:crm_timeline_action.field_crm_timeline_action_description
+#, python-format
+msgid "Description"
+msgstr "Descripción"
+
+#. module: crm_timeline_action
+#: model:ir.model.fields,field_description:crm_timeline_action.field_crm_timeline_action_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: crm_timeline_action
+#: model:ir.model.fields,field_description:crm_timeline_action.field_crm_timeline_action_id
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_timeline_action
+#: model:ir.model.fields,field_description:crm_timeline_action.field_crm_timeline_action___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: crm_timeline_action
+#: model:ir.model.fields,field_description:crm_timeline_action.field_crm_timeline_action_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: crm_timeline_action
+#: model:ir.model.fields,field_description:crm_timeline_action.field_crm_timeline_action_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: crm_timeline_action
+#: code:addons/crm_timeline_action/models/crm_timeline_action.py:20
+#: model:ir.model,name:crm_timeline_action.model_res_partner
+#: model:ir.model.fields,field_description:crm_timeline_action.field_crm_timeline_action_partner_id
+#, python-format
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: crm_timeline_action
+#: code:addons/crm_timeline_action/models/crm_timeline_action.py:25
+#: model:ir.model.fields,field_description:crm_timeline_action.field_crm_timeline_action_user_id
+#, python-format
+msgid "User"
+msgstr "Usuario"
+
+#. module: crm_timeline_action
+#: model:ir.model,name:crm_timeline_action.model_crm_timeline_action
+msgid "crm.timeline.action"
+msgstr "crm.timeline.action"
+
