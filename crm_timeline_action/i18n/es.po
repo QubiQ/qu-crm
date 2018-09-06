@@ -87,6 +87,13 @@ msgid "Partner"
 msgstr "Empresa"
 
 #. module: crm_timeline_action
+#: code:addons/crm_timeline_action/models/crm_timeline_action.py:24
+#: model:ir.model.fields,field_description:crm_timeline_action.field_crm_timeline_action_related_partner_id
+#, python-format
+msgid "Related Partner"
+msgstr "Empresa"
+
+#. module: crm_timeline_action
 #: code:addons/crm_timeline_action/models/crm_timeline_action.py:25
 #: model:ir.model.fields,field_description:crm_timeline_action.field_crm_timeline_action_user_id
 #, python-format

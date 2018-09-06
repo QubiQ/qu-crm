@@ -9,12 +9,27 @@
             <xpath expr="//notebook[last()]" position="inside">
                 <page string="CRM - Timeline" name="crm_action">
                     <separator string="CRM Actions"/>
-                    <field name="crm_timeline_actions" context="{'default_partner_id': active_id}">
-                        <tree string="CRM Actions" editable="bottom">
+                    <field name="crm_timeline_actions_parent" context="{'default_partner_id': active_id}"
+                        attrs="{'invisible': [('parent_id', '!=', False)]}">
+                        <tree string="CRM Actions parent" editable="bottom">
                             <field name="date"/>
+                            <field name="parent_id" invisible="1"/>
                             <field name="partner_id"
-                                domain="['|', ('id', '=', parent.id), ('parent_id', '=', parent.id)]"/>
-                            <field name="user_id"/>
+                                domain="['|', ('id', '=', parent.id), ('parent_id', '=', parent.id)]"
+                                options="{'no_create': True, 'no_open': True}"/>
+                            <field name="user_id" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="description"/>
+                        </tree>
+                    </field>
+
+                    <field name="crm_timeline_actions_partner" context="{'default_partner_id': active_id}"
+                        attrs="{'invisible': [('parent_id', '=', False)]}">
+                        <tree string="CRM Actions partner" editable="bottom">
+                            <field name="date"/>
+                            <field name="parent_id" invisible="1"/>
+                            <field name="partner_id" domain="[('id', '=', parent.id)]"
+                                options="{'no_create': True, 'no_open': True}"/>
+                            <field name="user_id" options="{'no_create': True, 'no_open': True}"/>
                             <field name="description"/>
                         </tree>
                     </field>
