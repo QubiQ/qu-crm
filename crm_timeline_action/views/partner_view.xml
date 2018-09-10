@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="crm_action_partner_view" model="ir.ui.view">
+        <field name="name">crm.action.partner.view</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook[last()]" position="inside">
+                <page string="CRM - Timeline" name="crm_action">
+                    <separator string="CRM Actions"/>
+                    <field name="crm_timeline_actions_parent" context="{'default_partner_id': active_id}"
+                        attrs="{'invisible': [('parent_id', '!=', False)]}">
+                        <tree string="CRM Actions parent" editable="bottom">
+                            <field name="date"/>
+                            <field name="parent_id" invisible="1"/>
+                            <field name="partner_id"
+                                domain="['|', ('id', '=', parent.id), ('parent_id', '=', parent.id)]"
+                                options="{'no_create': True, 'no_open': True}"/>
+                            <field name="user_id" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="description"/>
+                        </tree>
+                    </field>
+
+                    <field name="crm_timeline_actions_partner" context="{'default_partner_id': active_id}"
+                        attrs="{'invisible': [('parent_id', '=', False)]}">
+                        <tree string="CRM Actions partner" editable="bottom">
+                            <field name="date"/>
+                            <field name="parent_id" invisible="1"/>
+                            <field name="partner_id" domain="[('id', '=', parent.id)]"
+                                options="{'no_create': True, 'no_open': True}"/>
+                            <field name="user_id" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="description"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
