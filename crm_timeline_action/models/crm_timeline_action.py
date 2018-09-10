@@ -3,8 +3,6 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
 
 from odoo import models, fields, api, _
-import logging
-_logger = logging.getLogger(__name__)
 
 
 class CrmTimelineAction(models.Model):
@@ -38,7 +36,6 @@ class CrmTimelineAction(models.Model):
     @api.model
     def _get_default_parent(self):
         context = dict(self.env.context or {})
-        _logger.info(context)
         if 'default_partner_id' in context:
             partner_obj = self.env['res.partner'].browse([
                 context['default_partner_id']])
